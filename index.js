@@ -3,7 +3,6 @@ const todoList = document.querySelector('.todo-list')
 const addBtn = document.querySelector('.add-btn')
 
 function addTodo() {
-  console.log(input.value)
   if (input.value === '') return
 
   const todo = document.createElement('li')
@@ -42,8 +41,5 @@ function addTodo() {
 addBtn.addEventListener('click', addTodo)
 
 input.addEventListener('keyup', function (e) {
-  if (e.key === 'Enter') {
-    console.log(input.value)
-    addTodo()
-  }
+  if (e.key === 'Enter') addTodo()
 })
